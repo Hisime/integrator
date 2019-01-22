@@ -1,0 +1,41 @@
+.container {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+
+  @media (min-width: @screen-sm) {
+    width: @container-sm;
+    padding-left: @padding-width;
+    padding-right: @padding-width;
+  }
+
+  @media (min-width: @screen-md) {
+    width: @container-md;
+  }
+
+  @media (min-width: @screen-lg) {
+    width: @container-lg;
+  }
+
+  @media (min-width: @screen-xl) {
+    width: @container-xl;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media (min-width: @screen-xxl) {
+    width: @container-xxl;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+
+}
+
+.list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

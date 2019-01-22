@@ -1,0 +1,224 @@
+.page-footer {
+  background-color: #000;
+  background-image: url(../img/footer-bg.jpg);
+  background-size: cover;
+  padding-top: 45px;
+  padding-bottom: 180px;
+  @media (min-width: @screen-xs) and (max-width:@screen-lg-top) {
+    padding-bottom: 60px;
+    background-image: url(../img/footer-bg-small.jpg);
+  }
+  @media (min-width: @screen-xxl) {
+    background-image: url(../img/footer-bg-big.jpg);
+  }
+  &__title {
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    @media (min-width: @screen-xs) and (max-width:@screen-lg-top) {
+      font-size: 40px;
+      text-align: left;
+      padding-right: @padding-width;
+      padding-left: @padding-width;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (min-width: 1920px) {
+      width: @screen-xl;
+    }
+  }
+  &__left {
+    width: 47%;
+    @media (min-width: @screen-xs) and (max-width:@screen-lg-top) {
+      width: 100%;
+    }
+  }
+  &__right {
+    width: 46%;
+    @media (min-width: @screen-xs) and (max-width:@screen-lg-top) {
+      width: 100%;
+    }
+  }
+
+  &__cities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type:  none;
+    counter-reset: list1;
+    margin: 0 35px 10px 0;
+    @media (min-width: @screen-xs) and (max-width:@screen-lg-top) {
+      margin-right: 0;
+    }
+    li {
+      position: relative;
+      padding-left: 78px;
+      padding-top: 7px;
+      position: relative;
+      margin-bottom: 30px;
+      &::before {
+        position: absolute;
+        counter-increment: list1;
+        content: counter(list1);
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        left: 23px;
+        top: 15px;
+        z-index: 1;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: @orange;
+        border-radius: 50%;
+        top:0;
+        left:0;
+      }
+    }
+  }
+
+  &__map {
+    margin-bottom: 25px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__city {
+    display: block;
+    color: #fff;
+    margin-bottom: 3px;
+  }
+
+  &__city-number {
+    color: #fff;
+    >span {
+      color: @orange;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    input {
+      margin-bottom: 20px;
+    }
+    @media (min-width: @screen-xs) and (max-width:@screen-lg-top) {
+      margin-top: 30px;
+    }
+  }
+
+  &__name, &__text {
+    width: 100%;
+  }
+
+  &__mail, &__phone {
+    width: 225px;
+    @media (min-width: @screen-xs) and (max-width:@screen-xl-top) {
+      width: 100%;
+    }
+  }
+
+  &__agree {
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 30px;
+    display: flex;
+    line-height: 21px;
+    .jq-checkbox {
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
+    @media (min-width: @screen-xs) and (max-width:@screen-xl-top) {
+      order:1;
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__submit {
+    position: relative;
+    text-align: left;
+    color: #fff;
+    background-color: @orange;
+    width: 158px;
+    padding: 20px 40px;
+    border-radius: 30px;
+    border:0;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+    &:hover,&:active {
+      background-color: lighten(@orange, 10%)
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-right: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      transform: rotate(-45deg);
+      top: 27px;
+      margin-left: 5px;
+    }
+    @media (min-width: @screen-xs) and (max-width:@screen-xl-top) {
+      order:2;
+    }
+  }
+
+  &__text {
+    height: 120px;
+    resize: none;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    @media (min-width: @screen-xs) and (max-width:@screen-xl-top) {
+      flex-wrap: wrap;
+    }
+  }
+  &__address {
+    position: relative;
+    color:#fff;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    &::before {
+      content: '';
+      width: 15px;
+      height: 20px;
+      position: absolute;
+      background-image: url(../img/pin.svg);
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__mail {
+    position: relative;
+    padding-left: 35px;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/mail.svg);
+      width: 15px;
+      height: 16px;
+      top: 0;
+      left: 0;
+    }
+  }
+}

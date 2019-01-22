@@ -1,0 +1,36 @@
+.main-content {
+  display: flex;
+  margin-bottom: 80px;
+  &__left {
+    width: 200px;
+    margin-right: 60px;
+    flex-shrink:0;
+    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+      display: none;
+    }
+  }
+  &__right {
+    width: 75%;
+    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+      width: 100%;
+    }
+    @media (min-width: @screen-xxl) {
+      width: 84%;
+    }
+  }
+  &__banner {
+    margin-bottom: 40px;
+  }
+  &__upper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (max-width: @screen-lg-top) {
+      flex-wrap: wrap;
+      margin-top: -75px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

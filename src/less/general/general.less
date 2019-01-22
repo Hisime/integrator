@@ -1,0 +1,22 @@
+body {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: 300;
+  color: #010101;
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
+a {
+  text-decoration: none;
+  color: @orange;
+  &:hover {
+    text-decoration: underline;
+  }
+}

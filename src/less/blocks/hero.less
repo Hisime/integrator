@@ -1,0 +1,210 @@
+.hero {
+  width: 765px;
+  margin-top: -65px;
+  margin-bottom: 60px;
+  @media (max-width: @screen-lg-top) {
+    width: 100%;
+    margin-top: 15px;
+  }
+  @media (min-width: @screen-xxl) {
+    width: 1320px;
+  }
+  &__tab-buttons {
+    .list-reset();
+    display: flex;
+    height: 65px;
+    position: relative;
+    @media (max-width: @screen-lg-top) {
+      height: auto;
+    }
+  }
+  &__tab-button {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    &:nth-last-child(2) {
+      border-right: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    @media (min-width: @screen-xxl) {
+      &:not(.hero__tab-button--active) {
+        background-color: transparent;
+      }
+    }
+
+
+    @media (max-width: @screen-lg-top) {
+      width: 100%;
+      display: none;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-left: 20px;
+      border: none;
+      text-align: left;
+      &--active {
+        display: block;
+      }
+    }
+  }
+  &__tab-controls {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    @media (max-width: @screen-lg-top) {
+      display: block;
+    }
+  }
+  &__tab-arrow {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
+  &__tabs {
+    .list-reset();
+    width: 100%;
+  }
+  &__tab {
+    display: none;
+    position: relative;
+    width: 100%;
+    min-height: 430px;
+    overflow: hidden;
+    @media (max-width: @screen-lg-top) {
+      height: 500px;
+    }
+    &.tab--1 {
+      background-image: url('../img/tab-1-bg.png');
+      background-size: cover;
+      background-position: left top;
+    }
+    &--active {
+      display: flex;
+    }
+  }
+  &__content {
+    width: 50%;
+    max-width: 500px;
+    padding-top: 60px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    color: #010101;
+    &.tab--1 {
+      background-color: transparent;
+    }
+    @media (max-width: @screen-lg-top) {
+      width: 70%;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
+    @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+      width: 90%;
+      max-width: none;
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+  &__image-wrapper {
+    margin-left: auto;
+    width: 50%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: left;
+    overflow: hidden;
+    @media (max-width: @screen-lg-top) {
+      width: 100%;
+      position: absolute;
+      left: 65%;
+      bottom: 0;
+      margin-left: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+      display: none;
+    }
+  }
+  &__image {
+    width: auto;
+    height: 100%;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+    @media (max-width: @screen-lg-top) {
+      font-size: 36px;
+    }
+    &--bitrix {
+      width: 334px;
+      height: 60px;
+      @media (max-width: @screen-lg-top) {
+        background-size: contain;
+        width: 200px;
+        height: 40px;
+      }
+    }
+    &--amoCRM {
+      width: 231px;
+      height: 44px;
+      @media (max-width: @screen-lg-top) {
+        background-size: contain;
+        width: 200px;
+        height: 40px;
+      }
+    }
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__sub-title {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-family: Caveat;
+    @media (max-width: @screen-lg-top) {
+      font-size: 18px;
+    }
+  }
+  &__text {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 16px;
+    @media (max-width: @screen-lg-top) {
+      margin-top: 25px;
+    }
+  }
+}
+.tab--1 {
+  color: #fff;
+  background-color: #7f57c7;
+}
+.tab--2 {
+  background-color: #ffa700;
+}
+.tab--3 {
+  color: #fff;
+  background-color: #7048b8;
+}
+.tab--4 {
+  background-color: #ff9900;
+}

@@ -1,0 +1,32 @@
+.breadcrumbs {
+  .list-reset();
+  display: flex;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-left: 60px;
+  align-items: center;
+  &__item {
+    position: relative;
+    margin-right: 17px;
+    padding-right: 25px;
+    &:last-child::before {
+      content: none;
+    }
+    &::before {
+      position: absolute;
+      content: "|";
+      right: 0;
+      top: 0;
+      color: #cccccc;
+    }
+  }
+  &__link {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    &--active {
+      color: #cccccc;
+    }
+  }
+}

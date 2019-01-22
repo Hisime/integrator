@@ -20,12 +20,37 @@
     </div>
     <a href="javascript:void(0)" class="page-header__mega">в альянсе с</a>
     <div class="page-header__bottom-container container">
-      <form action="" class="page-header__bottom-search container">
+      <form action="" class="page-header__bottom-search">
         <input type="text" class="page-header__bottom-search-input" placeholder="Поиск">
         <label class="page-header__bottom-search-submit-label">
           <input type="submit" class="page-header__bottom-search-submit" value="">
         </label>
       </form>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a href="javascript:void(0)" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item">
+          <a href="javascript:void(0)" class="breadcrumbs__link breadcrumbs__link--active">Программное обеспечение</a>
+        </li>
+      </ul>
+      <div class="search-filters">
+        <button type="button" class="search-filters__button search-filters__button--block">
+          <svg width="20" height="20">
+            <use xlink:href="#icon-blocks"></use>
+          </svg>
+        </button>
+        <button type="button" class="search-filters__button search-filters__button--content search-filters__button--active">
+          <svg width="20" height="20">
+            <use xlink:href="#icon-content"></use>
+          </svg>
+        </button>
+        <button type="button" class="search-filters__button search-filters__button--list">
+          <svg width="20" height="20">
+            <use xlink:href="#icon-list"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
   <div class="main-content__upper container">
@@ -52,6 +77,84 @@
         </li>
     </ul>
   </div>
+  <div class="filter">
+    <form action="" class="filter__form">
+      <div class="filter__section">
+        <div class="filter__header">
+          <span class="filter__title">Тип продукта:</span>
+          <span class="filter__dropdown"></span>
+        </div>
+        <div class="filter__items">
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Битрикс 24 облако
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox" checked>
+            Битрикс 24 коробка
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Готовые бизнес-предложения
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Автоматизация на базе Битрикс 24 облако
+          </label>
+        </div>
+      </div>
+      <div class="filter__section">
+        <div class="filter__header">
+          <span class="filter__title">Лицензия:</span>
+          <span class="filter__dropdown"></span>
+        </div>
+        <div class="filter__items">
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Битрикс 24 облако
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox" checked>
+            Битрикс 24 коробка
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Готовые бизнес-предложения
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Автоматизация на базе Битрикс 24 облако
+          </label>
+        </div>
+      </div>
+      <div class="filter__section filter__section--active">
+        <div class="filter__header">
+          <span class="filter__title">Длительность лицензии:</span>
+          <span class="filter__dropdown"></span>
+        </div>
+        <div class="filter__items filter__items--hidden">
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Битрикс 24 облако
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox" checked>
+            Битрикс 24 коробка
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Готовые бизнес-предложения
+          </label>
+          <label class="filter__label">
+            <input type="checkbox" class="filter__checkbox">
+            Автоматизация на базе Битрикс 24 облако
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="filter__submit">Показать результаты
+      <button type="reset" class="filter__reset">Сбросить фильтр
+    </form>
+  </div>
 </div>
   <div class="main-content container">
     <div class="main-content__left">
@@ -63,223 +166,6 @@
       </div>
     </div>
     <div class="main-content__right">
-      <div class="recommend-slider">
-        <h2 class="recommend-slider__title main-title">
-          Рекомендуемые товары:
-        </h2>
-        <div class="products__items owl-carousel products__items--recommend">
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product11.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product11.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product11.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product11.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product11.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product11.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product11.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product12.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product12.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-          <div class="products__item">
-            <div class="products__item-photo">
-              <img src="img/product13.png" alt="">
-              <div class="products__buttons">
-                <button class="products__btn">
-                  <svg width="30" height="25">
-                    <use xlink:href="#cart"></use>
-                  </svg>
-                </button>
-                <button class="products__btn">
-                  <svg width="31" height="26">
-                    <use xlink:href="#favorite"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="products__item-name">
-              <a href="#">Внедрение Битрикс 24™</a>
-            </div>
-            <div class="products__item-price">35 000 ₽</div>
-          </div>
-        </div>
-      </div>
       <div class="products">
         <h2 class="products__title main-title">Наши предложения:</h2>
         <div class="products__filter">

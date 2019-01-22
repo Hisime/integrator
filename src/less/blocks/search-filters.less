@@ -1,0 +1,22 @@
+.search-filters {
+  display: flex;
+  align-items: center;
+  padding-bottom: 9px;
+  &__button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    padding: 0;
+    background: none;
+    border: none;
+    & svg {
+      fill: #ffa800;
+    }
+     &--active {
+      & svg {
+        fill: #ffffff;
+      }
+    }
+  }
+}

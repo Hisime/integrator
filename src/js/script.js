@@ -69,6 +69,13 @@ $(document).ready(function(){
   $('.page-header__top').on('click', '.page-header__search-btn, .page-header__top-close-search', function(event) {
     $('.page-header__top-form').toggleClass('page-header__top-form--active');
   })
+  $('.filter__form').on('click', '.filter__header', function(e) {
+    $(this)
+    .siblings('.filter__items')
+    .slideToggle()
+    .parent('.filter__section')
+    .toggleClass('filter__section--active')
+  })
 
 
 

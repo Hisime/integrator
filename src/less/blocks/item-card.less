@@ -1,0 +1,71 @@
+.item-card {
+  &__photo {
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+  }
+
+  &__price-old, &__price-new {
+    text-transform: uppercase;
+    font-family: @font-family2;
+    font-weight: 700;
+    font-size: 27px;
+  }
+
+  &__price-old {
+    text-decoration: line-through;
+    color: #010101;
+    opacity: 0.5;
+  }
+
+  &__label {
+    font-family: @font-family2;
+    font-size: 14px;
+    background-color: @purple;
+    color: #fff;
+    border-radius: 0 30px 30px 0;
+    >span {
+      font-weight: 700;
+    }
+  }
+  &__cart, &__favorite {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    display: flex;
+    transition: background 0.2s;
+
+    svg {
+      margin: auto;
+      transition: all 0.3s;
+    }
+  }
+  &__cart {
+    background-color: @orange;
+    border: none;
+    svg {
+      fill: #fff;
+    }
+    &:hover, &:active {
+      background-color: #fff;
+      border: 1px solid @orange;
+      svg {
+        fill: @orange;
+      }
+    }
+  }
+
+  &__favorite {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    svg {
+      stroke: @orange;
+    }
+    &:hover, &:active {
+      background-color: @orange;
+      border: none;
+      svg {
+        stroke: #fff;
+      }
+    }
+  }
+}

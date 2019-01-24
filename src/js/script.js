@@ -30,6 +30,16 @@ $(document).ready(function(){
     }
   });
 
+  $('.products__items--viewed').owlCarousel({
+    items:3,
+    smartSpeed: 500,
+    margin: 38,
+    nav: true,
+    loop: true,
+    dots: false,
+    autoplay: true
+  });
+
 
   $('.products__filter').on('click', '.products__filter-item ', function() {
     $(this).toggleClass('active').siblings().removeClass('active');

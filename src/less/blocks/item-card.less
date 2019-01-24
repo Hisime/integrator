@@ -8,6 +8,10 @@
     border: 1px solid #e5e5e5;
     margin-right: 60px;
   }
+  &__info {
+    width: 43%;
+    flex-grow: 1;
+  }
 
   &__price {
     display: flex;
@@ -67,6 +71,7 @@
   &__cart {
     background-color: @orange;
     border: none;
+    margin-right: 20px;
     svg {
       fill: #fff;
     }
@@ -96,6 +101,7 @@
 
   &__counter {
     display: flex;
+    margin-right: 25px;
   }
 
   &__bottom {
@@ -131,7 +137,15 @@
     }
   }
 
+  &__counter-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+  }
+
    &__plus {
+    margin-bottom: 5px;
     svg {
       fill: @orange;
     }
@@ -147,6 +161,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
    }
 
    &__descr {
@@ -154,5 +169,20 @@
       color:#999;
       line-height: 24px;
       margin-bottom: 36px;
-   }
+  }
+
+  &__extra-info {
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  &__text {
+    color: #999;
+    line-height: 27px;
+  }
 }

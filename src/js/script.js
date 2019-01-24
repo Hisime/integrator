@@ -76,6 +76,33 @@ $(document).ready(function(){
     .parent('.filter__section')
     .toggleClass('filter__section--active')
   })
+  $('.search-filters').on('click', '.search-filters__button', function(event) {
+    var categoryBlock = $('.category');
+    var $this = $(this);
+
+    function removeFilters() {
+      categoryBlock.removeClass('category--block category--list');
+    }
+    function changeFilter(filterClass) {
+      removeFilters();
+      if (filterClass) {
+        categoryBlock.addClass(filterClass);
+      }
+    }
+    function changeActiveButton() {
+      $('.search-filters__button').removeClass('search-filters__button--active');
+      $this.addClass('search-filters__button--active');
+    }
+
+    if ($this.hasClass('search-filters__button--block')) {
+      changeFilter('category--block');
+    } else if ($this.hasClass('search-filters__button--list')) {
+      changeFilter('category--list');
+    } else {
+      changeFilter();
+    }
+    changeActiveButton();
+  })
 
 
 

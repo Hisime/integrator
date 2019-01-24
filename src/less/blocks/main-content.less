@@ -32,5 +32,10 @@
       padding-left: 0;
       padding-right: 0;
     }
+    &:not(.main-content__upper--index) {
+      @media (max-width: @screen-lg-top) {
+        margin-top: -100px;
+      }
+    }
   }
 }

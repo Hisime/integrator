@@ -1,7 +1,17 @@
 .item-card {
+  &__title {
+    font-weight: 300;
+    font-size: 40px;
+  }
   &__photo {
     display: inline-block;
     border: 1px solid #e5e5e5;
+    margin-right: 60px;
+  }
+
+  &__price {
+    display: flex;
+    margin: 20px 0 13px 0;
   }
 
   &__price-old, &__price-new {
@@ -15,16 +25,31 @@
     text-decoration: line-through;
     color: #010101;
     opacity: 0.5;
+    margin-right: 27px;
   }
 
   &__label {
+    position: relative;
     font-family: @font-family2;
     font-size: 14px;
     background-color: @purple;
     color: #fff;
     border-radius: 0 30px 30px 0;
+    display: inline-block;
+    padding: 4px 30px 4px 15px;
+    margin-left: 10px;
+    margin-bottom: 30px;
     >span {
       font-weight: 700;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      border-top: 12px solid transparent;
+      border-right: 10px solid @purple;
+      border-bottom: 12px solid transparent;
+      left: -10px;
+      top: 0;
     }
   }
   &__cart, &__favorite {
@@ -68,4 +93,66 @@
       }
     }
   }
+
+  &__counter {
+    display: flex;
+  }
+
+  &__bottom {
+    display: flex;
+  }
+
+  &__counter-number {
+    width: 117px;
+    border: 1px solid #e5e5e5;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__plus, &__minus {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover, &:active {
+      border: 1px solid #f5f5f5;
+    }
+  }
+
+   &__plus {
+    svg {
+      fill: @orange;
+    }
+   }
+
+   &__minus {
+    svg {
+      fill: #999;
+    }
+   }
+
+   &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+   }
+
+   &__descr {
+      font-size: 16px;
+      color:#999;
+      line-height: 24px;
+      margin-bottom: 36px;
+   }
 }

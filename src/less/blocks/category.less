@@ -155,6 +155,11 @@
     color: #010101;
     font-size: 18px;
     line-height: 24px;
+    transition: background-color 0.3s;
+    &:hover {
+      text-decoration: none;
+      background-color: #ffa800;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -193,6 +198,9 @@
     @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
       margin-left: 5%;
     }
+    &:hover svg {
+      fill: #7048b8;
+    }
   }
   &__favorite-btn {
     margin-left: 16px;
@@ -207,6 +215,9 @@
     transition: all 0.3s;
     @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
       margin-left: 5%;
+    }
+    &:hover svg {
+      stroke: #7048b8;
     }
   }
   &__image {
@@ -436,6 +447,17 @@
             margin-right: auto;
           }
         }
+        & .category__image::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #7048b8;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          transition: opacity 0.3s;
+        }
         &:hover {
           & .category__buy-block {
             display: block;
@@ -443,14 +465,7 @@
           & .category__image {
               border: 1px solid #7048b8;
               &::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background-color: #7048b8;
                 opacity: 0.8;
-                top: 0;
-                left: 0;
               }
             }
         }
@@ -540,15 +555,24 @@
       &__buy-btn {
         margin-left: 0;
         fill: #ffffff;
-        &:hover {
+        & svg {
+          transition: all 0.3s;
+        }
+        &:hover svg {
           transform: scale(1.1);
+          fill: #fff;
         }
       }
       &__favorite-btn {
         margin-left: 39px;
         stroke: #ffffff;
-        &:hover {
+        transition: all 0.3s;
+        & svg {
+          transition: all 0.3s;
+        }
+        &:hover svg {
           transform: scale(1.1);
+          stroke: #fff;
         }
         @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
           margin-left: 20px;

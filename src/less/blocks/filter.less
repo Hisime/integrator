@@ -39,6 +39,7 @@
   &__header {
     display: flex;
     margin-bottom: 16px;
+    cursor: pointer;
   }
   &__dropdown {
     position: relative;
@@ -80,6 +81,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 1.25;
+    cursor: pointer;
   }
   &__items {
     margin-bottom: 13px;
@@ -101,6 +103,7 @@
     background-color: #ffa800;
     border: 1px solid #ffa800;
     border-radius: 30px;
+    transition: background-color 0.3s;
     &::after {
       content: "";
       position: absolute;
@@ -111,6 +114,9 @@
       transform: translate(0, -50%);
       background: url('../img/icon-arrow.svg');
       background-size: 8px 13px;
+    }
+    &:hover {
+      background-color: #fff;
     }
     @media (min-width: @screen-md) and (max-width: @screen-xl-top) {
       width: 49%;
@@ -134,6 +140,7 @@
     background-color: #ffffff;
     border: 1px solid #ffa800;
     border-radius: 30px;
+    transition: background-color 0.3s;
     &::after {
       content: "";
       position: absolute;
@@ -152,6 +159,9 @@
     @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
       width: 100%;
       margin-left: 0;
+    }
+    &:hover {
+      background-color: #ffa800;
     }
   }
 }

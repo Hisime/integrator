@@ -34,17 +34,25 @@
     position: relative;
     border: 1px solid #e5e5e5;
     border-bottom: none;
-
-    &:last-child {
-      border-bottom: 1px solid #e5e5e5;
-    }
-    &--active::before {
+    &::before {
       position: absolute;
       content: "";
       height: 100%;
       width: 3px;
       left: 0;
       top: 0;
+      background-color: #fff;
+      transition: background-color 0.3s;
+    }
+    &:hover {
+      &::before {
+        background-color: #7048b8;
+      }
+    }
+    &:last-child {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    &--active::before {
       background-color: #ffa800;
     }
   }

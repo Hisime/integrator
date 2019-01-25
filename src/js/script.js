@@ -113,9 +113,13 @@ $(document).ready(function(){
     }
     changeActiveButton();
   })
-
-
-
+  $('.side-menu').on('click', '.side-menu__select, .side-menu__item', function(event) {
+    $('.side-menu__list').toggleClass('side-menu__list--active');
+    if ($(event.target).hasClass('side-menu__link')) {
+      $('.side-menu__item').removeClass('side-menu__item--active');
+      $(this).addClass('side-menu__item--active');
+    }
+  })
 });
 
 

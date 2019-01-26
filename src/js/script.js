@@ -37,7 +37,25 @@ $(document).ready(function(){
     nav: true,
     loop: true,
     dots: false,
-    autoplay: true
+    autoplay: true,
+     responsive : {
+      0 : {
+        items:1,
+        center: true
+      },
+      600 : {
+        items: 2,
+        margin: 10
+      },
+      1024 : {
+        items: 3,
+        margin: 38
+      },
+      1920 : {
+        items: 3,
+        margin: 115
+      }
+    }
   });
 
 

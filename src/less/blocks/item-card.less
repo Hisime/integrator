@@ -7,15 +7,25 @@
     display: inline-block;
     border: 1px solid #e5e5e5;
     margin-right: 60px;
+
+    img {
+      max-width: 100%;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+      margin-right: 0;
+    }
   }
   &__info {
     width: 43%;
     flex-grow: 1;
+    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+      width: 100%;
+    }
   }
 
   &__price {
     display: flex;
-    margin: 20px 0 13px 0;
+    margin-bottom: 13px;
   }
 
   &__price-old, &__price-new {
@@ -72,6 +82,9 @@
     background-color: @orange;
     border: none;
     margin-right: 20px;
+    @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+      margin-right: 5px;
+    }
     svg {
       fill: #fff;
     }
@@ -102,10 +115,19 @@
   &__counter {
     display: flex;
     margin-right: 25px;
+    @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+      margin-right: 5px;
+    }
   }
 
   &__bottom {
     display: flex;
+    @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+      justify-content: center;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+      flex-wrap: wrap;
+    }
   }
 
   &__counter-number {

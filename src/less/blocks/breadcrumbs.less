@@ -6,6 +6,9 @@
   margin-left: 60px;
   align-items: center;
   flex-wrap: wrap;
+  @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+    display: none;
+  }
   @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
     margin-left: 0;
   }
@@ -43,15 +46,5 @@
     @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
       font-size: 14px;
     }
-  }
-}
-.category-page {
- .breadcrumbs {
-    @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
-      display: none;
-    }
-  }
-  .page-header__bottom-container {
-    justify-content: flex-end;
   }
 }

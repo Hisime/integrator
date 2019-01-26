@@ -3,15 +3,26 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
 
   &__btn {
+    position: relative;
     display: flex;
     width: 80px;
     height: 80px;
     border: 1px solid #e4e4e4;
-    background-color: red;
-    &:first-child {
-      border-bottom: 0;
+    transition: all 0.3s;
+    background-color: #fff;
+
+    @media (min-width:@screen-xs) and (max-width: @screen-lg-top) {
+      width: 40px;
+      height: 40px;
+
+      svg {
+        width: 20px;
+        height: 15px;
+      }
     }
     svg {
       margin: auto;
@@ -19,14 +30,43 @@
   }
 
   &__btn--cart {
+    border-bottom: 0;
+    border-radius: 2px 0 0 0;
+
+    &:hover {
+      background-color: @orange;
+      svg {
+        fill: #fff;
+      }
+    }
     svg {
       fill: @orange;
     }
   }
 
   &__btn--favorite {
+    border-radius: 0 0 0 2px;
+    &:hover {
+      background-color: #d8d8d8;
+      svg {
+        stroke: #fff;
+      }
+    }
     svg {
-      stroke: rgba(255, 255, 255, .5);
+      stroke: #d8d8d8;
+    }
+  }
+
+  &__count {
+    right: 11px;
+    bottom: 21px;
+    color: #000;
+    font-size: 12px;
+    position: absolute;
+    @media (min-width:@screen-xs) and (max-width: @screen-lg-top) {
+      font-size: 11px;
+      right: 3px;
+      bottom: 1px;
     }
   }
 }

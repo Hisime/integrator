@@ -2,6 +2,9 @@
   &__title {
     font-weight: 300;
     font-size: 40px;
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      font-size: 25px;
+    }
   }
   &__photo {
     display: inline-block;
@@ -62,9 +65,9 @@
     &::before {
       content: '';
       position: absolute;
-      border-top: 12px solid transparent;
+      border-top: 13px solid transparent;
       border-right: 10px solid @purple;
-      border-bottom: 12px solid transparent;
+      border-bottom: 13px solid transparent;
       left: -10px;
       top: 0;
     }

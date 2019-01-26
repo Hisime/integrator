@@ -12,11 +12,18 @@
     border: none;
     & svg {
       fill: #ffa800;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
      &--active {
       & svg {
         fill: #ffffff;
       }
     }
+  }
+  @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+    padding-bottom: 0;
   }
 }

@@ -167,6 +167,10 @@
       align-self: flex-end;
       display: flex;
       justify-content: space-between;
+      @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
     &-search {
       height: 60px;
@@ -305,8 +309,7 @@
       padding-left: 20px;
       padding-right: 20px;
     }
-    &--active::after,
-    &:hover::after {
+    &::after {
       position: absolute;
       content: "";
       bottom: 0;
@@ -314,6 +317,11 @@
       transform: translate(-50%, 0);
       width: calc(100% - 39px);
       height: 3px;
+      background-color: #fff;
+      transition: background-color 0.3s;
+    }
+    &--active::after,
+    &:hover::after {
       background-color: #ffa800;
     }
   }

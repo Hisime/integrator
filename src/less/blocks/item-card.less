@@ -11,14 +11,17 @@
     img {
       max-width: 100%;
     }
-    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
       margin-right: 0;
+    }
+    @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+      margin-right: 20px;
     }
   }
   &__info {
     width: 43%;
     flex-grow: 1;
-    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
       width: 100%;
     }
   }

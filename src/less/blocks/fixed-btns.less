@@ -1,0 +1,32 @@
+.fixed-btns {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &__btn {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #e4e4e4;
+    background-color: red;
+    &:first-child {
+      border-bottom: 0;
+    }
+    svg {
+      margin: auto;
+    }
+  }
+
+  &__btn--cart {
+    svg {
+      fill: @orange;
+    }
+  }
+
+  &__btn--favorite {
+    svg {
+      stroke: rgba(255, 255, 255, .5);
+    }
+  }
+}

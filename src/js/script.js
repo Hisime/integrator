@@ -1,4 +1,14 @@
 $(document).ready(function(){
+  function ToggleMenu() {
+    $('.page-header__burger').toggleClass('page-header__burger--active');
+    $('.page-header__nav').toggleClass('page-header__nav--active');
+  }
+  function changeSlider(numOfSlide) {
+    $('.hero__tab').removeClass('hero__tab--active');
+    $('.hero__tab-button').removeClass('hero__tab-button--active');
+    $('.hero__tab').eq(numOfSlide).addClass('hero__tab--active');
+    $('.hero__tab-button').eq(numOfSlide).addClass('hero__tab-button--active');
+  }
 
   $('input, select').styler();
 
@@ -57,18 +67,9 @@ $(document).ready(function(){
       }
     }
   });
-
-
   $('.products__filter').on('click', '.products__filter-item ', function() {
     $(this).toggleClass('active').siblings().removeClass('active');
   });
-
-  function changeSlider(numOfSlide) {
-      $('.hero__tab').removeClass('hero__tab--active');
-      $('.hero__tab-button').removeClass('hero__tab-button--active');
-      $('.hero__tab').eq(numOfSlide).addClass('hero__tab--active');
-      $('.hero__tab-button').eq(numOfSlide).addClass('hero__tab-button--active');
-    }
   $('.hero__tab-buttons').on('click', '.hero__tab-button', function() {
     var curIndex = $(this).index();
     changeSlider(curIndex);
@@ -90,13 +91,16 @@ $(document).ready(function(){
     }
     changeSlider(currentSlideIndex);
   });
-  $('.page-header__top').on('click', '.page-header__burger', function(event) {
-    $(this).toggleClass('page-header__burger--active');
-    $('.page-header__nav').toggleClass('page-header__nav--active');
-  })
+  $('.page-header__top').on('click', '.page-header__burger', ToggleMenu)
   $('.page-header__top').on('click', '.page-header__search-btn, .page-header__top-close-search', function(event) {
     $('.page-header__top-form').toggleClass('page-header__top-form--active');
   })
+  $('body').click(function(e) {
+    if (!$(e.target).closest('.page-header__nav, .page-header__burger').length){
+      $('.page-header__burger').removeClass('page-header__burger--active');
+      $('.page-header__nav').removeClass('page-header__nav--active');
+    }
+  });
   $('.filter__form').on('click', '.filter__header', function(e) {
     $(this)
     .siblings('.filter__items')

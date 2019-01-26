@@ -9,6 +9,20 @@ $(document).ready(function(){
     $('.hero__tab').eq(numOfSlide).addClass('hero__tab--active');
     $('.hero__tab-button').eq(numOfSlide).addClass('hero__tab-button--active');
   }
+  function itemCardChangeValue() {
+    var inputField = $('.item-card__counter-number');
+    var inputValue = inputField.val();
+    if ($(this).hasClass('item-card__plus')) {
+      inputValue++;
+    } else {
+      inputValue--;
+      if (inputValue < 0) {
+        inputValue = 0;
+      }
+    }
+    inputField.val(inputValue);
+  }
+  $('.item-card__counter-btn').on('click', '.item-card__plus, .item-card__minus', itemCardChangeValue)
 
   $('input, select').styler();
 

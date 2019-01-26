@@ -5,8 +5,17 @@
     width: 200px;
     margin-right: 60px;
     flex-shrink:0;
-    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
-      display: none;
+    z-index: 1;
+    @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+      width: 0;
+      margin-right: 0;
+    }
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      width: 100%;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
   }
   &__right {
@@ -20,6 +29,9 @@
   }
   &__banner {
     margin-bottom: 40px;
+    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+      display: none;
+    }
   }
   &__upper {
     display: flex;

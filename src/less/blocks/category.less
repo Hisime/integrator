@@ -154,11 +154,13 @@
     color: #010101;
     font-size: 0;
     line-height: 24px;
-    fill: #ffa800;
     transform: translateY(6px);
-    transition: all 0.3s;
     @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
       margin-left: 5%;
+    }
+    & svg {
+      transition: all 0.3s;
+      fill: #ffa800;
     }
     &:hover svg {
       fill: #7048b8;
@@ -172,11 +174,14 @@
     color: #010101;
     font-size: 18px;
     line-height: 24px;
-    stroke: #ffa800;
     transform: translateY(6px);
-    transition: all 0.3s;
+
     @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
       margin-left: 5%;
+    }
+    & svg {
+      stroke: #ffa800;
+      transition: all 0.3s;
     }
     &:hover svg {
       stroke: #7048b8;
@@ -228,6 +233,11 @@
     &-arrow {
       width: 60px;
       position: relative;
+      &:hover {
+        & svg {
+          fill: #7048b8;
+        }
+      }
       &::before {
         content: "";
         position: absolute;
@@ -247,6 +257,7 @@
         left: 0;
         top: 0;
         fill: #ffa800;
+        transition: all 0.3s;
       }
       &--right {
         &::before {
@@ -364,6 +375,9 @@
   &--block {
     & .category {
       &__item {
+        .item-card__label {
+          display: none;
+        }
         flex-direction: column;
         position: relative;
         width: 228px;
@@ -484,12 +498,6 @@
         margin-top: 0;
         text-align: center;
       }
-      &__old-cost {
-        display: none;
-      }
-      &__sale {
-        display: none;
-      }
       &__description {
         display: none;
       }
@@ -516,8 +524,8 @@
       }
       &__buy-btn {
         margin-left: 0;
-        fill: #ffffff;
         & svg {
+          fill: #ffffff;
           transition: all 0.3s;
         }
         &:hover svg {
@@ -527,9 +535,8 @@
       }
       &__favorite-btn {
         margin-left: 39px;
-        stroke: #ffffff;
-        transition: all 0.3s;
         & svg {
+          stroke: #ffffff;
           transition: all 0.3s;
         }
         &:hover svg {
@@ -547,6 +554,9 @@
       &__item {
         margin-bottom: 0;
         border-bottom: 1px solid #e5e5e5;
+        .item-card__label {
+          display: none;
+        }
       }
       &__table-header {
         display: flex;
@@ -594,14 +604,9 @@
         font-size: 18px;
         color: #666666;
       }
-      &__old-cost {
-        display: none;
-      }
-      &__sale {
-        display: none;
-      }
       &__cost-block {
         margin-right: auto;
+        flex-wrap: wrap;
         @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
           width: 25%;
         }
@@ -643,6 +648,14 @@
         }
       }
       &__cost {
+        width: 100%;
+        @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+          font-size: 14px;
+        }
+      }
+      &__old-cost {
+        margin-right: 0;
+        width: 100%;
         @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
           font-size: 14px;
         }
